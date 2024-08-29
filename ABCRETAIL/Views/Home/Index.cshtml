@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "ABC Retail - Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .btn-lg {
+            padding: 15px 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .btn-lg:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+        .btn-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+
+            .btn-icon i {
+                margin-right: 10px;
+            }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+        }
+
+        .card-body {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .card-text {
+            font-size: 15px;
+            color: #555;
+        }
+
+        .jumbotron {
+            background-color: #ff6347;
+            color: #ffffff;
+            padding: 60px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to ABC Retail!</h1>
+            <p class="lead">Explore our exclusive range of products and services. Your satisfaction is our priority!</p>
+        </div>
+
+        <div class="row">
+            <!-- Product Categories Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="@Url.Action("Index", "Products")" class="btn btn-danger btn-lg btn-icon">
+                            <i class="fas fa-tags"></i>
+                            View Product Categories
+                        </a>
+                        <p class="card-text">Explore various product categories tailored for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Offers Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="@Url.Action("SpecialOffers", "Home")" class="btn btn-success btn-lg btn-icon">
+                            <i class="fas fa-gift"></i>
+                            Special Offers
+                        </a>
+                        <p class="card-text">Check out our latest discounts and special offers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Support Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="@Url.Action("Support", "Home")" class="btn btn-info btn-lg btn-icon">
+                            <i class="fas fa-headset"></i>
+                            Customer Support
+                        </a>
+                        <p class="card-text">Need help? Our support team is here for you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Arrivals Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="@Url.Action("NewArrivals", "Products")" class="btn btn-primary btn-lg btn-icon">
+                            <i class="fas fa-star"></i>
+                            New Arrivals
+                        </a>
+                        <p class="card-text">Discover the latest products in our collection.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Sellers Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="@Url.Action("BestSellers", "Products")" class="btn btn-warning btn-lg btn-icon">
+                            <i class="fas fa-chart-line"></i>
+                            Best Sellers
+                        </a>
+                        <p class="card-text">Find out what's trending and popular among our customers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Us Card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="@Url.Action("Contact", "Home")" class="btn btn-secondary btn-lg btn-icon">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                        <p class="card-text">Get in touch with us for any inquiries or feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

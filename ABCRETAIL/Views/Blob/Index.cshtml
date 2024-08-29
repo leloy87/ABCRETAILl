@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Blob Storage";
+}
+
+<h2 style="text-align: center; color: #4CAF50; font-family: Arial, sans-serif;">Blob Storage</h2>
+
+<!-- Container for the forms -->
+<div style="width: 50%; margin: 0 auto; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
+    <!-- Form to upload a blob -->
+    <form asp-controller="Blob" asp-action="UploadBlob" method="post" enctype="multipart/form-data" style="margin-bottom: 20px;">
+        <h3 style="color: #333;">Upload Blob</h3>
+
+        <div style="margin-bottom: 15px;">
+            <label for="containerName" style="display: block; margin-bottom: 5px;">Container Name:</label>
+            <input type="text" id="containerName" name="containerName" required style="width: 100%; padding: 8px; box-sizing: border-box;" />
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="blobName" style="display: block; margin-bottom: 5px;">Blob Name:</label>
+            <input type="text" id="blobName" name="blobName" required style="width: 100%; padding: 8px; box-sizing: border-box;" />
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="file" style="display: block; margin-bottom: 5px;">File:</label>
+            <input type="file" id="file" name="file" required style="width: 100%; padding: 8px; box-sizing: border-box;" />
+        </div>
+
+        <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Upload Blob</button>
+    </form>
+
+    <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;" />
+
+    <!-- Form to download a blob -->
+    <form asp-controller="Blob" asp-action="DownloadBlob" method="get" style="margin-bottom: 20px;">
+        <h3 style="color: #333;">Download Blob</h3>
+
+        <div style="margin-bottom: 15px;">
+            <label for="containerName" style="display: block; margin-bottom: 5px;">Container Name:</label>
+            <input type="text" id="containerName" name="containerName" required style="width: 100%; padding: 8px; box-sizing: border-box;" />
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="blobName" style="display: block; margin-bottom: 5px;">Blob Name:</label>
+            <input type="text" id="blobName" name="blobName" required style="width: 100%; padding: 8px; box-sizing: border-box;" />
+        </div>
+
+        <button type="submit" style="background-color: #2196F3; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Download Blob</button>
+    </form>
+
+    <hr style="border: none; border-top: 1px solid #ccc; margin: 20px 0;" />
+
+    <!-- Form to delete a blob -->
+    <form asp-controller="Blob" asp-action="DeleteBlob" method="post">
+        <h3 style="color: #333;">Delete Blob</h3>
+
+        <div style="margin-bottom: 15px;">
+            <label for="containerName" style="display: block; margin-bottom: 5px;">Container Name:</label>
+            <input type="text" id="containerName" name="containerName" required style="width: 100%; padding: 8px; box-sizing: border-box;" />
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="blobName" style="display: block; margin-bottom: 5px;">Blob Name:</label>
+            <input type="text" id="blobName" name="blobName" required style="width: 100%; padding: 8px; box-sizing: border-box;" />
+        </div>
+
+        <button type="submit" style="background-color: #f44336; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Delete Blob</button>
+    </form>
+
+</div>

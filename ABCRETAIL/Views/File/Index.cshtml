@@ -1,0 +1,25 @@
+﻿@model ABCRETAIL.Models.FileViewModel
+
+@{
+    ViewBag.Title = "File Management";
+}
+
+<h2>File Management</h2>
+
+<!-- Form to upload a file -->
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <label for="file">Select a file to upload:</label>
+    <input type="file" id="file" name="File" required />
+    <button type="submit">Upload File</button>
+</form>
+
+<hr />
+
+<!-- Form to download a file -->
+<form asp-action="Download" method="get">
+    <label for="fileName">Enter the file name to download:</label>
+    <input type="text" id="fileName" name="fileName" required />
+    <button type="submit">Download File</button>
+</form>
+
+
